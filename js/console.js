@@ -83,3 +83,21 @@ function cursor() {
         opacity: 1
     }, 'fast', 'linear');
 }
+
+function ScreenButton() {
+    var button = document.getElementById("switch");
+    var body = document.getElementById("body");
+    var screen = document.getElementById("console-screen");
+    if (button.checked === true)
+    {
+        body.classList.remove('crt');
+        screen.classList.remove('crt');
+    }
+    else {
+        var body = document.getElementById("body");
+        var console = document.getElementById("console-screen");
+        
+        body.classList.add('crt');
+        screen.classList.add('crt');
+    }
+}
