@@ -1,123 +1,104 @@
-@font-face {
-  font-family: "terminal";
-  src: url("../assets/fonts/Glass_TTY_VT220.ttf");
-}
-
-#body {
-  background-color: #131212;
-  padding: 1%;
-  color: darkgreen;
-  font-family: terminal;
-  font-size: 3vw;
-  will-change: text-shadow;
-  will-change: transform;
-}
-
-.navbar {
-  margin-bottom: 0px !important;
-  background: darkgreen;
-  opacity: .6;
-  border: none;
-  border-radius: 0px;
-}
-
-.navbar-default a {
-  color: #fff !important;
-}
-
-.active > a {
-  background-color: #4CAF50 !important;
-}
-
-.intro {
-  padding-top: 10vh;
+/* line 2, style.scss */
+body {
+  font-size: 2vw;
   text-align: center;
-  color: #fff;
-  height: 70vh;
 }
 
-pre {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -60%);
-  background: none;
-  border: none;
-  color: darkgreen;
+/* line 7, style.scss */
+.navbar {
+  margin-bottom: 0px;
+  margin-top: 0px;
+  background-color: grey;
+  border: none !important;
+  border-radius: 0px !important;
 }
 
+/* line 14, style.scss */
+.navbar-brand {
+  color: white !important;
+}
+
+/* line 17, style.scss */
+.navbar-default .navbar-nav > li > a {
+  color: white;
+}
+
+/* line 21, style.scss */
+.intro {
+  padding-top: 5%;
+  margin-bottom: 5%;
+}
+
+/* line 26, style.scss */
+.focus {
+  display: flex;
+  justify-content: center;
+}
+
+/* line 31, style.scss */
+.img-section {
+  margin: 5%;
+  font-size: 20px;
+  flex: 1;
+}
+
+/* line 37, style.scss */
 .intro h1 {
   font-weight: 700;
+  font-size: 60px;
 }
 
-.about-me {
-  text-align: center;
+/* line 43, style.scss */
+.intro {
+  width: 100%;
+  height: 75vh;
+  color: #fff;
+  background: linear-gradient(-45deg, #ee7752, #e73c7e, #23a6d5, #23d5ab);
+  background-size: 400% 400%;
+  -webkit-animation: Gradient 15s ease infinite;
+  -moz-animation: Gradient 15s ease infinite;
+  animation: Gradient 15s ease infinite;
 }
 
-.about-me h1 {
-  font-weight: 700;
-}
-
-.about-me p {
-  font-size: 2vw;
-}
-
-.skills {
-  text-align: center;
-}
-
-.skills h1 {
-  font-weight: 700;
-}
-
-.skills p {
-  font-size: 2vw;
-}
-
-.skills ul {
-  list-style-type: none;
-}
-
-.skills li {
-  display: inline;
-}
-
-#html-skill {
-  width: 45%;
-  height: 30px;
-  background-color: #4CAF50;
-  text-align: center;
-  /* To center it horizontally (if you want) */
-  line-height: 30px;
-  /* To center it vertically */
-  color: white;
-  display: flex;
-  float: left;
-}
-
-#css-skill {
-  width: 45%;
-  height: 30px;
-  background-color: #4CAF50;
-  text-align: center;
-  /* To center it horizontally (if you want) */
-  line-height: 30px;
-  /* To center it vertically */
-  color: white;
-  display: flex;
-  float: right;
-}
-
-@media screen and (max-width: 700px) {
-  body {
-    font-size: 1.25em;
+@-webkit-keyframes Gradient {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
   }
 }
-
+@-moz-keyframes Gradient {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+@keyframes Gradient {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+/* line 91, style.scss */
 #switch {
   display: none;
 }
 
+/* line 94, style.scss */
 .switch-label {
   display: inline-block;
   cursor: pointer;
@@ -128,11 +109,11 @@ pre {
   border-radius: 5px;
   box-shadow: 0 2px #666;
 }
-
+/* line 103, style.scss */
 .switch-label::after {
-  content: "on";
+  content: "Retro";
 }
-
+/* line 106, style.scss */
 .switch-label::before {
   content: " ";
   display: inline-block;
@@ -143,182 +124,83 @@ pre {
   margin-right: 10px;
   border: 1px solid #111;
 }
-
+/* line 116, style.scss */
 .switch-label:active {
   box-shadow: none;
   transform: translate3d(0, 2px, 0);
 }
 
+/* line 122, style.scss */
 #switch:checked + .switch-label::before {
   background: #22ff55;
 }
-
+/* line 125, style.scss */
 #switch:checked + .switch-label::after {
-  content: "off";
+  content: "Retro";
 }
 
-@keyframes flicker {
-  0% {
-    opacity: 0.27861;
-  }
-  5% {
-    opacity: 0.34769;
-  }
-  10% {
-    opacity: 0.23604;
-  }
-  15% {
-    opacity: 0.90626;
-  }
-  20% {
-    opacity: 0.18128;
-  }
-  25% {
-    opacity: 0.83891;
-  }
-  30% {
-    opacity: 0.65583;
-  }
-  35% {
-    opacity: 0.67807;
-  }
-  40% {
-    opacity: 0.26559;
-  }
-  45% {
-    opacity: 0.84693;
-  }
-  50% {
-    opacity: 0.96019;
-  }
-  55% {
-    opacity: 0.08594;
-  }
-  60% {
-    opacity: 0.20313;
-  }
-  65% {
-    opacity: 0.71988;
-  }
-  70% {
-    opacity: 0.53455;
-  }
-  75% {
-    opacity: 0.37288;
-  }
-  80% {
-    opacity: 0.71428;
-  }
-  85% {
-    opacity: 0.70419;
-  }
-  90% {
-    opacity: 0.7003;
-  }
-  95% {
-    opacity: 0.36108;
-  }
-  100% {
-    opacity: 0.24387;
-  }
+/* line 131, style.scss */
+input[type=text], select, textarea {
+  width: 100%;
+  /* Full width */
+  padding: 12px;
+  /* Some padding */
+  border: 1px solid #ccc;
+  /* Gray border */
+  border-radius: 4px;
+  /* Rounded borders */
+  box-sizing: border-box;
+  /* Make sure that padding and width stays in place */
+  margin-top: 6px;
+  /* Add a top margin */
+  margin-bottom: 16px;
+  /* Bottom margin */
+  resize: vertical;
 }
 
-@keyframes textShadow {
-  0% {
-    text-shadow: 0.43899px 0 1px rgba(0, 30, 255, 0.5), -0.43899px 0 1px rgba(255, 0, 80, 0.3), 0 0 3px;
-  }
-  5% {
-    text-shadow: 2.7929px 0 1px rgba(0, 30, 255, 0.5), -2.7929px 0 1px rgba(255, 0, 80, 0.3), 0 0 3px;
-  }
-  10% {
-    text-shadow: 0.02956px 0 1px rgba(0, 30, 255, 0.5), -0.02956px 0 1px rgba(255, 0, 80, 0.3), 0 0 3px;
-  }
-  15% {
-    text-shadow: 0.40219px 0 1px rgba(0, 30, 255, 0.5), -0.40219px 0 1px rgba(255, 0, 80, 0.3), 0 0 3px;
-  }
-  20% {
-    text-shadow: 3.4794px 0 1px rgba(0, 30, 255, 0.5), -3.4794px 0 1px rgba(255, 0, 80, 0.3), 0 0 3px;
-  }
-  25% {
-    text-shadow: 1.61256px 0 1px rgba(0, 30, 255, 0.5), -1.61256px 0 1px rgba(255, 0, 80, 0.3), 0 0 3px;
-  }
-  30% {
-    text-shadow: 0.70156px 0 1px rgba(0, 30, 255, 0.5), -0.70156px 0 1px rgba(255, 0, 80, 0.3), 0 0 3px;
-  }
-  35% {
-    text-shadow: 3.89691px 0 1px rgba(0, 30, 255, 0.5), -3.89691px 0 1px rgba(255, 0, 80, 0.3), 0 0 3px;
-  }
-  40% {
-    text-shadow: 3.87091px 0 1px rgba(0, 30, 255, 0.5), -3.87091px 0 1px rgba(255, 0, 80, 0.3), 0 0 3px;
-  }
-  45% {
-    text-shadow: 2.23106px 0 1px rgba(0, 30, 255, 0.5), -2.23106px 0 1px rgba(255, 0, 80, 0.3), 0 0 3px;
-  }
-  50% {
-    text-shadow: 0.08084px 0 1px rgba(0, 30, 255, 0.5), -0.08084px 0 1px rgba(255, 0, 80, 0.3), 0 0 3px;
-  }
-  55% {
-    text-shadow: 2.37585px 0 1px rgba(0, 30, 255, 0.5), -2.37585px 0 1px rgba(255, 0, 80, 0.3), 0 0 3px;
-  }
-  60% {
-    text-shadow: 2.20219px 0 1px rgba(0, 30, 255, 0.5), -2.20219px 0 1px rgba(255, 0, 80, 0.3), 0 0 3px;
-  }
-  65% {
-    text-shadow: 2.86388px 0 1px rgba(0, 30, 255, 0.5), -2.86388px 0 1px rgba(255, 0, 80, 0.3), 0 0 3px;
-  }
-  70% {
-    text-shadow: 0.48874px 0 1px rgba(0, 30, 255, 0.5), -0.48874px 0 1px rgba(255, 0, 80, 0.3), 0 0 3px;
-  }
-  75% {
-    text-shadow: 1.89485px 0 1px rgba(0, 30, 255, 0.5), -1.89485px 0 1px rgba(255, 0, 80, 0.3), 0 0 3px;
-  }
-  80% {
-    text-shadow: 0.0833px 0 1px rgba(0, 30, 255, 0.5), -0.0833px 0 1px rgba(255, 0, 80, 0.3), 0 0 3px;
-  }
-  85% {
-    text-shadow: 0.0977px 0 1px rgba(0, 30, 255, 0.5), -0.0977px 0 1px rgba(255, 0, 80, 0.3), 0 0 3px;
-  }
-  90% {
-    text-shadow: 3.44334px 0 1px rgba(0, 30, 255, 0.5), -3.44334px 0 1px rgba(255, 0, 80, 0.3), 0 0 3px;
-  }
-  95% {
-    text-shadow: 2.18418px 0 1px rgba(0, 30, 255, 0.5), -2.18418px 0 1px rgba(255, 0, 80, 0.3), 0 0 3px;
-  }
-  100% {
-    text-shadow: 2.62088px 0 1px rgba(0, 30, 255, 0.5), -2.62088px 0 1px rgba(255, 0, 80, 0.3), 0 0 3px;
-  }
+/* Style the submit button with a specific background color etc */
+/* line 143, style.scss */
+input[type=submit] {
+  background-color: #f6891e;
+  color: white;
+  padding: 12px 20px;
+  border: none;
+  cursor: pointer;
 }
 
-.crt::after {
-  content: " ";
-  display: block;
-  position: absolute;
-  top: 0;
-  left: 0;
-  bottom: 0;
-  right: 0;
-  height: 200vh;
-  background: rgba(18, 16, 16, 0.1);
-  opacity: 0;
-  pointer-events: none;
-  animation: flicker 0.15s infinite;
+/* When moving the mouse over the submit button, add a darker green color */
+/* line 152, style.scss */
+input[type=submit]:hover {
+  background-color: #f6891e;
 }
 
-.crt::before {
-  content: " ";
-  display: block;
-  position: absolute;
-  top: 0;
-  left: 0;
-  bottom: 0;
-  right: 0;
-  height: 200vh;
-  background: linear-gradient(rgba(18, 16, 16, 0) 50%, rgba(0, 0, 0, 0.25) 50%), linear-gradient(90deg, rgba(255, 0, 0, 0.06), rgba(0, 255, 0, 0.02), rgba(0, 0, 255, 0.06));
-  background-size: 100% 2px, 3px 100%;
-  pointer-events: none;
+/* Add a background color and some padding around the form */
+/* line 157, style.scss */
+.contact-form {
+  border-radius: 5px;
+  background-color: #f2f2f2;
+  padding: 20px;
+  width: 99%;
+  margin: 0 auto;
+  display: flex;
+  justify-content: center;
+  width: 97.5vw;
+  font-size: 20px;
 }
 
-.crt {
-  animation: textShadow 2.6s infinite;
+/* line 169, style.scss */
+.contact-form h3 {
+  font-weight: 800;
+  font-size: 34px;
+  margin-bottom: 25px;
 }
-/*# sourceMappingURL=style.css.map */
+
+/* line 175, style.scss */
+form .row {
+  display: flex;
+}
+
+/* line 179, style.scss */
+.form-col {
+  flex: 1;
+}

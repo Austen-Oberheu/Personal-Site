@@ -1,88 +1,4 @@
-var textLength = 0;
-var text = '';
-var textCounter = 0;
-var textList = ['login', 'AustenOberheu', '********'];
-var consoleText = document.getElementsByClassName('console-text');
-var consoleLine = document.getElementsByClassName('console-line');
-var cursors = document.getElementsByClassName('cursor');
-var skip = false;
-
-//Hide console lines
-for (var i = 0; i < consoleLine.length; i++) {
-    consoleLine[i].style.display = "none";
-    cursors[i].style.display = "none";
-}
-
-//Hide all other content
-document.getElementById("website").style.display = "none";
-
-consoleLine[0].style.display = "inline";
-cursors[0].style.display = "inline";
-
-$(document).ready(function () {
-
-    // setInterval(cursor, 600);
-    
-    // function ConsoleLoop() {
-    //    setTimeout(function () {
-    //        consoleLogin: {
-    //         if(skip === true)
-    //         {
-    //             clearTimeout(pageSwitch);
-    //             SwitchToMainPage();
-    //             break consoleLogin;
-    //         }
-    //         text = textList[textCounter];
-    //         if (textList[textCounter] !== undefined)
-    //         {
-    //             setTimeout(typing, 1000);
-    //         }
-    //         setTimeout('textCounter++', 2000);
-    //         if (textCounter < consoleText.length) {
-    //             consoleLine[textCounter].style.display = "inline";
-    //             cursors[textCounter].style.display = "inline";
-    //             if (textCounter < consoleText.length - 1) {
-    //                 ConsoleLoop();
-    //             }
-    //         }
-    //     }}, 2000) 
-    // }
-
-    // ConsoleLoop();
-    // var pageSwitch = setTimeout(SwitchToMainPage, 10000);
-
-    SwitchToMainPage();
-})
-
-function SwitchToMainPage() {
-    document.getElementsByClassName("console")[0].style.display = "none";
-
-    document.getElementById("website").style.display = "inline";
-}
-
-function typing() {
-    tempConsoleText = document.getElementsByClassName('console-text')[textCounter];
-    currentConsoleText = $(tempConsoleText);
-    currentConsoleText.html(textList[textCounter].substr(0, textLength++));
-    if (textLength < textList[textCounter].length + 1) {
-        setTimeout(typing, 50);
-    } else {
-        textLength = 0;
-        cursors[textCounter].style.display = "none";
-        //text = '';
-    }
-
-}
-
-
-function cursor() {
-    currentCursor = document.getElementsByClassName('cursor')[textCounter];
-    $(currentCursor).animate({
-        opacity: 0
-    }, 'fast', 'linear').animate({
-        opacity: 1
-    }, 'fast', 'linear');
-}
+var retroStyle = false;
 
 function ScreenButton() {
     var button = document.getElementById("switch");
@@ -100,4 +16,47 @@ function ScreenButton() {
         body.classList.add('crt');
         screen.classList.add('crt');
     }
+}
+
+function changeCSS(cssLinkIndex) {
+    cssFile = null;
+    var oldlink = document.getElementsByTagName("link").item(1);
+
+    if (retroStyle === false){
+        cssFile = "../css/retro-style.css";
+        retroStyle = true;
+    }
+    else{
+        cssFile = "../css/style.css";
+        retroStyle = false;
+    }
+    var newlink = document.createElement("link");
+    newlink.setAttribute("rel", "stylesheet");
+    newlink.setAttribute("type", "text/css");
+    newlink.setAttribute("href", cssFile);
+
+    document.getElementsByTagName("head").item(0).replaceChild(newlink, oldlink);
+}
+
+var message_send = document.getElementById("message-send");
+message_send.style.display = "none";
+
+function POST_Form() {
+
+    var firstName = document.getElementById("fname").value;
+    var lastName = document.getElementById("lname").value;
+    var email = document.getElementById("email").value;
+    var phone = document.getElementById("phone").value;
+    var message = document.getElementById("message").value;
+
+
+
+    $.post("http://austenoberheu.com/html_form_send.php", {first_name: firstName, 
+    last_name: lastName, email: email, phone: phone,
+    message: message})
+     .always(function(){
+         var contactForm = document.getElementsByClassName("contact-form")[0];
+         contactForm.style.display = "none";
+         message_send.style.display = "block";
+     })
 }

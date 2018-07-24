@@ -1,0 +1,347 @@
+@font-face {
+  font-family: "terminal";
+  src: url("../assets/fonts/Glass_TTY_VT220.ttf");
+}
+/* line 8, retro-style.scss */
+body {
+  background-color: #131212;
+  padding: 1%;
+  color: darkgreen;
+  font-family: terminal;
+  font-size: 2vw;
+  will-change: transform;
+  will-change: opacity;
+}
+
+/* line 19, retro-style.scss */
+.navbar {
+  margin-bottom: 0px !important;
+  background: darkgreen;
+  opacity: .6;
+  border: none;
+  border-radius: 0px;
+}
+
+/* line 27, retro-style.scss */
+.navbar-default a {
+  color: #fff !important;
+}
+
+/* line 31, retro-style.scss */
+.active > a {
+  background-color: #4CAF50 !important;
+}
+
+/* line 35, retro-style.scss */
+.intro {
+  padding-top: 5vh;
+  text-align: center;
+  color: #fff;
+  height: 100vh;
+  margin-bottom: 50px;
+}
+
+/* line 43, retro-style.scss */
+.intro-background {
+  height: 100%;
+  background-image: url("../assets/images/web_logos.png");
+  background-repeat: no-repeat;
+  background-size: 100%;
+}
+
+/* line 50, retro-style.scss */
+pre {
+  color: darkgreen;
+}
+
+/* line 54, retro-style.scss */
+.intro h1 {
+  font-weight: 700;
+  font-size: 60px;
+}
+
+/* line 58, retro-style.scss */
+.about-me {
+  text-align: center;
+}
+
+/* line 61, retro-style.scss */
+.about-me h1 {
+  font-weight: 700;
+}
+
+/* line 64, retro-style.scss */
+.about-me p {
+  font-size: 2vw;
+}
+
+/* line 67, retro-style.scss */
+.skills {
+  text-align: center;
+}
+
+/* line 70, retro-style.scss */
+.skills h1 {
+  font-weight: 700;
+}
+
+/* line 73, retro-style.scss */
+.skills p {
+  font-size: 2vw;
+}
+
+/* line 76, retro-style.scss */
+.skills ul {
+  list-style-type: none;
+}
+
+/* line 79, retro-style.scss */
+.skills li {
+  display: inline;
+}
+
+/* line 83, retro-style.scss */
+#html-skill {
+  width: 45%;
+  height: 30px;
+  background-color: #4CAF50;
+  text-align: center;
+  /* To center it horizontally (if you want) */
+  line-height: 30px;
+  /* To center it vertically */
+  color: white;
+  display: flex;
+  float: left;
+}
+
+/* line 94, retro-style.scss */
+#css-skill {
+  width: 45%;
+  height: 30px;
+  background-color: #4CAF50;
+  text-align: center;
+  /* To center it horizontally (if you want) */
+  line-height: 30px;
+  /* To center it vertically */
+  color: white;
+  display: flex;
+  float: right;
+}
+
+@media screen and (max-width: 700px) {
+  /* line 106, retro-style.scss */
+  body {
+    font-size: 1.25em;
+  }
+}
+/* line 111, retro-style.scss */
+#switch {
+  display: none;
+}
+
+/* line 114, retro-style.scss */
+.switch-label {
+  display: inline-block;
+  cursor: pointer;
+  background: #fff;
+  color: #111;
+  padding-left: 15px;
+  padding-right: 15px;
+  border-radius: 5px;
+  box-shadow: 0 2px #666;
+}
+/* line 123, retro-style.scss */
+.switch-label::after {
+  content: "Modern";
+}
+/* line 126, retro-style.scss */
+.switch-label::before {
+  content: " ";
+  display: inline-block;
+  border-radius: 100%;
+  width: 10px;
+  height: 10px;
+  background: #003321;
+  margin-right: 10px;
+  border: 1px solid #111;
+}
+/* line 136, retro-style.scss */
+.switch-label:active {
+  box-shadow: none;
+  transform: translate3d(0, 2px, 0);
+}
+
+/* line 142, retro-style.scss */
+#switch:checked + .switch-label::before {
+  background: #22ff55;
+}
+/* line 145, retro-style.scss */
+#switch:checked + .switch-label::after {
+  content: "Modern";
+}
+
+@keyframes flicker {
+  0% {
+    opacity: 0.27861;
+  }
+  5% {
+    opacity: 0.34769;
+  }
+  10% {
+    opacity: 0.23604;
+  }
+  15% {
+    opacity: 0.90626;
+  }
+  20% {
+    opacity: 0.18128;
+  }
+  25% {
+    opacity: 0.83891;
+  }
+  30% {
+    opacity: 0.65583;
+  }
+  35% {
+    opacity: 0.67807;
+  }
+  40% {
+    opacity: 0.26559;
+  }
+  45% {
+    opacity: 0.84693;
+  }
+  50% {
+    opacity: 0.96019;
+  }
+  55% {
+    opacity: 0.08594;
+  }
+  60% {
+    opacity: 0.20313;
+  }
+  65% {
+    opacity: 0.71988;
+  }
+  70% {
+    opacity: 0.53455;
+  }
+  75% {
+    opacity: 0.37288;
+  }
+  80% {
+    opacity: 0.71428;
+  }
+  85% {
+    opacity: 0.70419;
+  }
+  90% {
+    opacity: 0.7003;
+  }
+  95% {
+    opacity: 0.36108;
+  }
+  100% {
+    opacity: 0.24387;
+  }
+}
+@keyframes textShadow {
+  0% {
+    text-shadow: 0.43899px 0 1px rgba(0, 30, 255, 0.5), -0.43899px 0 1px rgba(255, 0, 80, 0.3), 0 0 3px;
+  }
+  5% {
+    text-shadow: 2.7929px 0 1px rgba(0, 30, 255, 0.5), -2.7929px 0 1px rgba(255, 0, 80, 0.3), 0 0 3px;
+  }
+  10% {
+    text-shadow: 0.02956px 0 1px rgba(0, 30, 255, 0.5), -0.02956px 0 1px rgba(255, 0, 80, 0.3), 0 0 3px;
+  }
+  15% {
+    text-shadow: 0.40219px 0 1px rgba(0, 30, 255, 0.5), -0.40219px 0 1px rgba(255, 0, 80, 0.3), 0 0 3px;
+  }
+  20% {
+    text-shadow: 3.4794px 0 1px rgba(0, 30, 255, 0.5), -3.4794px 0 1px rgba(255, 0, 80, 0.3), 0 0 3px;
+  }
+  25% {
+    text-shadow: 1.61256px 0 1px rgba(0, 30, 255, 0.5), -1.61256px 0 1px rgba(255, 0, 80, 0.3), 0 0 3px;
+  }
+  30% {
+    text-shadow: 0.70156px 0 1px rgba(0, 30, 255, 0.5), -0.70156px 0 1px rgba(255, 0, 80, 0.3), 0 0 3px;
+  }
+  35% {
+    text-shadow: 3.89691px 0 1px rgba(0, 30, 255, 0.5), -3.89691px 0 1px rgba(255, 0, 80, 0.3), 0 0 3px;
+  }
+  40% {
+    text-shadow: 3.87091px 0 1px rgba(0, 30, 255, 0.5), -3.87091px 0 1px rgba(255, 0, 80, 0.3), 0 0 3px;
+  }
+  45% {
+    text-shadow: 2.23106px 0 1px rgba(0, 30, 255, 0.5), -2.23106px 0 1px rgba(255, 0, 80, 0.3), 0 0 3px;
+  }
+  50% {
+    text-shadow: 0.08084px 0 1px rgba(0, 30, 255, 0.5), -0.08084px 0 1px rgba(255, 0, 80, 0.3), 0 0 3px;
+  }
+  55% {
+    text-shadow: 2.37585px 0 1px rgba(0, 30, 255, 0.5), -2.37585px 0 1px rgba(255, 0, 80, 0.3), 0 0 3px;
+  }
+  60% {
+    text-shadow: 2.20219px 0 1px rgba(0, 30, 255, 0.5), -2.20219px 0 1px rgba(255, 0, 80, 0.3), 0 0 3px;
+  }
+  65% {
+    text-shadow: 2.86388px 0 1px rgba(0, 30, 255, 0.5), -2.86388px 0 1px rgba(255, 0, 80, 0.3), 0 0 3px;
+  }
+  70% {
+    text-shadow: 0.48874px 0 1px rgba(0, 30, 255, 0.5), -0.48874px 0 1px rgba(255, 0, 80, 0.3), 0 0 3px;
+  }
+  75% {
+    text-shadow: 1.89485px 0 1px rgba(0, 30, 255, 0.5), -1.89485px 0 1px rgba(255, 0, 80, 0.3), 0 0 3px;
+  }
+  80% {
+    text-shadow: 0.0833px 0 1px rgba(0, 30, 255, 0.5), -0.0833px 0 1px rgba(255, 0, 80, 0.3), 0 0 3px;
+  }
+  85% {
+    text-shadow: 0.0977px 0 1px rgba(0, 30, 255, 0.5), -0.0977px 0 1px rgba(255, 0, 80, 0.3), 0 0 3px;
+  }
+  90% {
+    text-shadow: 3.44334px 0 1px rgba(0, 30, 255, 0.5), -3.44334px 0 1px rgba(255, 0, 80, 0.3), 0 0 3px;
+  }
+  95% {
+    text-shadow: 2.18418px 0 1px rgba(0, 30, 255, 0.5), -2.18418px 0 1px rgba(255, 0, 80, 0.3), 0 0 3px;
+  }
+  100% {
+    text-shadow: 2.62088px 0 1px rgba(0, 30, 255, 0.5), -2.62088px 0 1px rgba(255, 0, 80, 0.3), 0 0 3px;
+  }
+}
+/* line 281, retro-style.scss */
+.crt::after {
+  content: " ";
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  height: 200vh;
+  background: rgba(18, 16, 16, 0.1);
+  opacity: 0;
+  pointer-events: none;
+  animation: flicker 0.15s infinite;
+}
+
+/* line 295, retro-style.scss */
+.crt::before {
+  content: " ";
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  height: 200vh;
+  background: linear-gradient(rgba(18, 16, 16, 0) 50%, rgba(0, 0, 0, 0.25) 50%), linear-gradient(90deg, rgba(255, 0, 0, 0.06), rgba(0, 255, 0, 0.02), rgba(0, 0, 255, 0.06));
+  background-size: 100% 2px, 3px 100%;
+  pointer-events: none;
+}
+
+/* line 308, retro-style.scss */
+.crt {
+  animation: textShadow 2.6s infinite;
+}
